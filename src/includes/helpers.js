@@ -17,13 +17,27 @@ const kmToMiles = (km) => {
 };
 
 /**
- * Converts Japanese Yen to US Dollars.
- * @param {number} yen - The amount in Japanese Yen.
- * @returns {number} The equivalent amount in US Dollars.
+ * 
+ * @param {number} yen
+ * @returns {number}
  */
 const yenToUsd = (yen) => {
-    const exchangeRate = 0.0066; // Example rate: 1 Yen = 0.0066 USD
+    const exchangeRate = 0.0066; 
     return yen * exchangeRate;
 };
 
-export { generateConfirmationCode, kmToMiles, yenToUsd };
+/**
+ * Converts a month number to its three-letter abbreviation.
+ * @param {number|string} monthNum - The month number from 1 to 12.
+ * @returns {string|number} The month abbreviation, or the original value if invalid.
+ */
+const getMonthAbbreviation = (monthNum) => {
+    const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+    const monthIndex = Number(monthNum) - 1;
+
+    return Number.isInteger(monthIndex) && monthIndex >= 0 && monthIndex < months.length
+        ? months[monthIndex]
+        : monthNum;
+};
+
+export { generateConfirmationCode, getMonthAbbreviation, kmToMiles, yenToUsd };

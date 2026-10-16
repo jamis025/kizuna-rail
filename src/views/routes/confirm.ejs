@@ -46,6 +46,22 @@
                 </div>
 
                 <div class="detail-card">
+                    <div class="detail-icon">$</div>
+                    <div class="detail-content">
+                        <span class="detail-label">Price per Ticket</span>
+                        <span class="detail-value">$<%= Number(pricePerTicket).toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) %></span>
+                    </div>
+                </div>
+
+                <div class="detail-card">
+                    <div class="detail-icon">$</div>
+                    <div class="detail-content">
+                        <span class="detail-label">Total Price</span>
+                        <span class="detail-value">$<%= Number(totalPrice).toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) %></span>
+                    </div>
+                </div>
+
+                <div class="detail-card">
                     <div class="detail-icon">🕐</div>
                     <div class="detail-content">
                         <span class="detail-label">Booked On</span>

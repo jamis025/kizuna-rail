@@ -1,3 +1,11 @@
+.filters-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+.region-filter { justify-self: start; }
+.season-filter { justify-self: end; }
+
 article.route-detail {
     max-width: var(--content-max-width);
     margin: 0 auto;

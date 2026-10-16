@@ -1,3 +1,17 @@
+.route-filters {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--space-md);
+    margin-bottom: var(--space-xl);
+
+    .route-filter {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: var(--space-xs);
+    }
+}
+
 .routes-grid {
     display: flex;
     flex-direction: column;
@@ -300,5 +314,11 @@
                 }
             }
         }
+    }
+}
+
+@media (max-width: 480px) {
+    .route-filters {
+        grid-template-columns: 1fr;
     }
 }

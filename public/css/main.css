@@ -15,3 +15,20 @@
 @import 'components/columns-grid.css' layer(components);
 
 @import 'layout/all-layouts.css' layer(layout);
+
+@media print {
+    header, footer, .nav-menu, .btn-print, .action-buttons {
+        display: none !important;
+    }
+    body, .confirmation-container {
+        margin: 0;
+        padding: 0;
+        background: none;
+        color: #000;
+    }
+    .confirmation-card {
+        box-shadow: none;
+        border: none;
+        page-break-inside: avoid;
+    }
+}

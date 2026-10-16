@@ -7,7 +7,10 @@ import { Router } from 'express';
 const router = Router();
 
 // List all routes
-router.get('/', listRoutesPage);
+router.get('/', (req, res, next) => {
+    const { region, season } = req.query;
+    listRoutesPage(req, res, next); 
+    });
 
 // Route details page
 router.get('/:routeId', routeDetailsPage);
